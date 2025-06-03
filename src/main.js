@@ -27,7 +27,6 @@ form.addEventListener('submit', async e => {
   try {
     const data = await getImagesByQuery(query);
 
-    setTimeout(() => {
       hideLoader();
 
       if (data.hits.length === 0) {
@@ -42,7 +41,7 @@ form.addEventListener('submit', async e => {
       }
 
       createGallery(data.hits);
-    }, 600);
+   
   } catch (error) {
     hideLoader();
     iziToast.error({
