@@ -9,8 +9,12 @@ import {
   hideLoader,
 } from './js/render-functions';
 
+
 const form = document.querySelector('.form');
 const input = form.querySelector('input[name="search-text"]');
+
+let page = 1;
+
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
